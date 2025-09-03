@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "",
+  "homepage": "https://raiyannawaz.github.io/Interview-AI",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

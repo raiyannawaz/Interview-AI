@@ -13,6 +13,7 @@ import InterviewSession from './pages/InterviewSession'
 import Spinner from './components/custom/Spinner'
 import InterviewFeedback from './pages/InterviewFeedback'
 import { getInterviewAttempts, resetAlert } from './app/features/interview/interviewSlice'
+import AuthCallback from './components/custom/AuthCallback'
 
 function App() {
 
@@ -49,6 +50,9 @@ function App() {
       <Routes>
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/sign-up" element={<SignUp />} />
+        {/* This is for supabase email confirm redirect */}
+        <Route path="/auth/callback" element={<AuthCallback />} />
+        {/* This is for supabase email confirm redirect */}
         <Route element={<ProtectedRoute />}>
           <Route path="/" element={<Dashboard />} />
           <Route path='/interview-setup' element={<InterviewSetup />} />

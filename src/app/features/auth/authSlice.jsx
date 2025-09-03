@@ -15,7 +15,12 @@ export const handleSignUp = createAsyncThunk('auth/sign-up',
 export const handleSignIn = createAsyncThunk('auth/sign-in',
     async ({ email, password }, { rejectWithValue, dispatch }) => {
 
-        let { data, error } = await supabase.auth.signInWithPassword({ email, password })
+        let { data, error } = await supabase.auth.signInWithPassword({ 
+            email, password,
+            options: {
+                emailRedirectTo: "https://raiyannawaz.github.io/Interview-AI/#/auth/callback"
+            }
+        })
 
         if (error) {
             return rejectWithValue(error)
