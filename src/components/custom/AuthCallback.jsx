@@ -53,7 +53,7 @@ export default function AuthCallback() {
 
   return (
     <div className="h-svh w-svw bg-slate-50 flex justify-center items-center">
-      <p>Completing authentication...</p>
+      <p>Completing authentication.....</p>
     </div>
   )
 }
