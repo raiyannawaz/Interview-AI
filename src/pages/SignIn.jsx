@@ -41,6 +41,12 @@ export default function SignIn() {
         dispatch(resetAuth())
       }, 3000)
     }
+
+    if(success?.type === 'sign-out'){
+      setTimeout(()=>{
+        dispatch(resetAuth())
+      }, 3000)
+    }
   }, [success])
 
   return (
