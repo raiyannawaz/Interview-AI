@@ -23,6 +23,8 @@ function App() {
 
   let { success } = useSelector(store => store.interview)
 
+  localStorage.setItem(JSON.stringify({href: window.location.href, hash: window.location.hash}))
+
   useEffect(() => {
     dispatch(handleGetSession())
     if (token) {
