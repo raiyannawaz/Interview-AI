@@ -71,11 +71,11 @@ export default function InterviewSetup() {
   }, [question, loading])
 
   return (
-    <div className="h-dvh w-svw grid content-center justify-items-center bg-gradient-to-br from-slate-100 to-slate-200">
+    <div className="h-svh w-svw grid content-center justify-items-center bg-gradient-to-br from-slate-100 to-slate-200">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(handleSubmit)}
-          className="space-y-5 bg-white p-10 shadow-xl rounded-lg w-10/12 lg:w-1/3 text-sm md:text-base"
+          className="space-y-5 bg-white p-7.5 lg:p-10 shadow-xl rounded-lg w-10/12 lg:w-1/3 text-sm md:text-base"
         >
           {/* Role */}
           <FormField className="w-full"

@@ -60,7 +60,7 @@ export default function InterviewSession() {
   }, [question, loading])
 
   return (
-    <div className="h-dvh w-svw bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center p-6">
+    <div className="h-svh w-svw bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center p-6">
       <Card className="w-full max-w-2xl shadow-xl rounded-2xl text-sm md:text-base">
         <CardHeader className="text-center">
           <CardTitle className="text-xl font-semibold">Interview Question</CardTitle>

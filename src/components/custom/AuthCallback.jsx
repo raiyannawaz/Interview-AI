@@ -52,7 +52,7 @@ export default function AuthCallback() {
   }, [navigate])
 
   return (
-    <div className="h-dvh w-svw bg-slate-50 flex justify-center items-center">
+    <div className="h-svh w-svw bg-slate-50 flex justify-center items-center">
       <p>Completing authentication.....</p>
     </div>
   )

@@ -16,8 +16,8 @@ export default function InterviewAttempt({ handleCurrentIA }) {
   }
 
   return (
-    <div className="w-full h-full fixed top-0 left-0 z-50">
-      <Card className="w-[90%] lg:w-auto h-[90%] fixed top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] flex flex-col shadow-xl rounded-2xl z-30">
+    <div className="h-svh w-svw fixed top-0 left-0 z-50">
+      <Card className="w-[90%] lg:w-auto absolute h-[90%] top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] flex flex-col shadow-xl rounded-2xl z-30">
         {/* Header */}
         <CardHeader className="text-center">
           <CardTitle className="text-xl font-semibold">

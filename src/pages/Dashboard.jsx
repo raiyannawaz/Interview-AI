@@ -53,7 +53,7 @@ export default function Dashboard() {
   }, [success])
 
   return (
-    <div className="h-auto min-h-dvh lg:h-dvh lg:min-h-auto w-svw flex flex-col lg:flex-row lg:justify-between gap-5 lg:gap-7.5 bg-slate-50 p-5 lg:p-7.5 relative">
+    <div className="h-auto min-h-svh lg:h-svh lg:min-h-auto w-svw flex flex-col lg:flex-row lg:justify-between gap-5 lg:gap-7.5 bg-slate-50 p-5 lg:p-7.5 relative">
       {/* Interview Attempts */}
       {currentIA && <InterviewAttempt handleCurrentIA={handleCurrentIA} />}
       { editMode && <UserProfile/>}
