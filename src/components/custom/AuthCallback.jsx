@@ -17,16 +17,15 @@ export default function AuthCallback() {
         .then(({ error }) => {
           if (error) {
             console.error("Error setting session:", error.message)
-            navigate("/sign-in")
           } else {
             // remove tokens from URL
             window.history.replaceState({}, document.title, "/Interview-AI/#/")
-            navigate("/")
+           
           }
         })
     } else {
       console.error("No tokens found in URL")
-      navigate("/sign-in")
+      
     }
   }, [navigate])
 
