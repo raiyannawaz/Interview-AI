@@ -34,14 +34,14 @@ export default function Feedback() {
         
         {/* Header (fixed, not scrollable) */}
         <CardHeader className="text-center shrink-0">
-          <CardTitle className="text-xl font-semibold">AI Interview Feedback</CardTitle>
-          <p className="text-slate-500 mt-2">
+          <CardTitle className="text-lg lg:text-xl font-semibold">AI Interview Feedback</CardTitle>
+          <p className="text-slate-500 mt-0 text-sm lg:text-base">
             Here’s your evaluation based on the submitted answer
           </p>
         </CardHeader>
 
         {/* Content (scrollable only if needed) */}
-        <CardContent className="flex-1 overflow-y-auto space-y-6 p-6">
+        <CardContent className="flex-1 overflow-y-auto space-y-6 lg:p-6">
           {/* Score */}
           <div className="flex items-center justify-center gap-2">
             <span className="text-slate-600 font-medium">Score:</span>
@@ -54,7 +54,7 @@ export default function Feedback() {
           {feedback?.strengths && (
             <div className="bg-green-50 border border-green-200 p-4 rounded-xl">
               <h4 className="font-semibold text-green-700 mb-2">Strengths</h4>
-              <p className="text-slate-700">{feedback.strengths}</p>
+              <p className="text-slate-700 text-sm lg:text-base">{feedback.strengths}</p>
             </div>
           )}
 
@@ -62,7 +62,7 @@ export default function Feedback() {
           {feedback?.weaknesses && (
             <div className="bg-red-50 border border-red-200 p-4 rounded-xl">
               <h4 className="font-semibold text-red-700 mb-2">Weaknesses</h4>
-              <p className="text-slate-700">{feedback.weaknesses}</p>
+              <p className="text-slate-700 text-sm lg:text-base">{feedback.weaknesses}</p>
             </div>
           )}
 
@@ -70,7 +70,7 @@ export default function Feedback() {
           {feedback?.suggestions && (
             <div className="bg-blue-50 border border-blue-200 p-4 rounded-xl">
               <h4 className="font-semibold text-blue-700 mb-2">Suggestions</h4>
-              <p className="text-slate-700 leading-relaxed">{feedback.suggestions}</p>
+              <p className="text-slate-700 leading-relaxed text-sm lg:text-base">{feedback.suggestions}</p>
             </div>
           )}
         </CardContent>

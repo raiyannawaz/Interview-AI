@@ -63,14 +63,14 @@ export default function InterviewSession() {
     <div className="h-svh w-svw overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center p-2 lg:p-6">
       <Card className="w-11/12 lg:w-full lg:max-w-2xl shadow-xl rounded-2xl text-sm md:text-base">
         <CardHeader className="text-center">
-          <CardTitle className="text-xl font-semibold">Interview Question</CardTitle>
-          <p className="text-slate-500 mt-2">
+          <CardTitle className="text-lg lg:text-xl font-semibold">Interview Question</CardTitle>
+          <p className="text-slate-500 mt-2 text-sm lg:text-base">
             You have <span className="font-medium">{formatTime(timeLeft)}</span> to answer
           </p>
         </CardHeader>
         <CardContent className="space-y-4">
           {/* Question */}
-          <div className="p-4 rounded-lg bg-slate-50 border text-slate-700 max-h-40 overflow-auto scrollbar-hide">
+          <div className="text-sm lg:text-base p-4 rounded-lg bg-slate-50 border text-slate-700 max-h-40 overflow-auto scrollbar-hide">
             {question}
           </div>
 
@@ -79,7 +79,7 @@ export default function InterviewSession() {
             value={answer}
             onChange={(e) => setAnswer(e.target.value)}
             placeholder="Write your answer here..."
-            className="h-40 resize-none overflow-y-auto"
+            className="h-40 resize-none overflow-y-auto text-sm lg:text-base"
           />
 
           {/* Submit */}
