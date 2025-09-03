@@ -5,8 +5,8 @@ import { supabase } from "../../supabaseClient";
 export default function AuthCallback() {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const hash = window.location.hash.substring(1)
+   useEffect(() => {
+    const hash = window.location.hash.substring(1) // remove #
     const params = new URLSearchParams(hash)
 
     const access_token = params.get("access_token")
@@ -16,11 +16,12 @@ export default function AuthCallback() {
       supabase.auth.setSession({
         access_token,
         refresh_token,
-      }).then(({ data, error }) => {
+      }).then(({ error }) => {
         if (error) {
           console.error("Error setting session:", error.message)
+          navigate("/sign-in")
         } else {
-          console.log("Session established:", data)
+          console.log("Session established")
           window.history.replaceState({}, document.title, "/Interview-AI/#/")
           navigate("/")
         }
