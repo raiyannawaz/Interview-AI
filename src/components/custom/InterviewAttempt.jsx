@@ -29,7 +29,7 @@ export default function InterviewAttempt({ handleCurrentIA }) {
         </CardHeader>
 
         {/* Content (scrollable if long) */}
-        <CardContent className="flex-1 overflow-y-auto px-6 space-y-6">
+        <CardContent className="flex-1 overflow-y-auto px-4 lg:px-6 space-y-6">
 
           {/* Setup  */}
           <div className="px-4 bg-slate-50 py-4 rounded-2xl">
