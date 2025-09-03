@@ -5,32 +5,25 @@ import { supabase } from "../../supabaseClient";
 export default function AuthCallback() {
   const navigate = useNavigate();
 
-   useEffect(() => {
-    const hash = window.location.hash.substring(1) // remove #
-    const params = new URLSearchParams(hash)
+  useEffect(() => {
+    const handleAuthCallback = async () => {
+      const { data, error } = await supabase.auth.getSession();
+      
+      if (error) {
+        console.error('Auth callback error:', error);
+        navigate('/login'); 
+        return;
+      }
 
-    const access_token = params.get("access_token")
-    const refresh_token = params.get("refresh_token")
+      if (data.session) {
+        navigate('/');
+      } else {
+        navigate('/sign-in'); // or your auth page
+      }
+    };
 
-    if (access_token && refresh_token) {
-      supabase.auth.setSession({
-        access_token,
-        refresh_token,
-      }).then(({ error }) => {
-        if (error) {
-          console.error("Error setting session:", error.message)
-          navigate("/sign-in")
-        } else {
-          console.log("Session established")
-          window.history.replaceState({}, document.title, "/Interview-AI/#/")
-          navigate("/")
-        }
-      })
-    } else {
-      console.error("No tokens in URL")
-      navigate("/sign-in")
-    }
-  }, [navigate])
+    handleAuthCallback();
+  }, [navigate]);
 
   return <div className="h-svh w-svw bg-slate-50 flex justify-center items-center"><p>Completing authentication...</p></div>;
 }
