@@ -9,7 +9,7 @@ export default function AlertDemo() {
     let { error: authError, success: authSuccess } = useSelector(store => store.auth)
 
     return (
-        <div className="grid w-full max-w-xs items-start gap-4 fixed right-10 top-10 z-50">
+        userError ||  userSuccess ||  interviewError ||  interviewSuccess ||  authError ||  authSuccess ?<div className="grid w-full max-w-xs items-start gap-4 fixed right-10 top-10 z-50">
             { authSuccess || userSuccess || interviewSuccess ? <Alert>
                 <CheckCircle2Icon />
                 <AlertTitle>{authSuccess?.message || userSuccess?.message || interviewSuccess?.message}</AlertTitle>
@@ -18,6 +18,6 @@ export default function AlertDemo() {
                 <AlertCircleIcon />
                 <AlertTitle>{authError?.message || userError?.message || interviewError?.message}</AlertTitle>
             </Alert> : ''}
-        </div>
+        </div> : ''
     )
 }
