@@ -67,7 +67,7 @@ export default function InterviewSetup() {
   }, [question, loading])
 
   return (
-    <div className="h-svh w-svw grid content-center justify-items-center bg-gradient-to-br from-slate-100 to-slate-200">
+    <div className="h-[100svh] w-svw grid content-center justify-items-center bg-gradient-to-br from-slate-100 to-slate-200">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(handleSubmit)}

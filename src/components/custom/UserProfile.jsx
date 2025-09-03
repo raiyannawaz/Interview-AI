@@ -52,7 +52,7 @@ export default function UserProfile() {
   }
 
   return (
-    <div className="h-svh w-svw fixed top-0 left-0 z-50 bg-black/50">
+    <div className="h-[100svh] w-svw fixed top-0 left-0 z-50 bg-black/50">
       <div className="w-[85%] lg:w-1/3 bg-slate-200 top-[50%] left-[50%] -translate-[50%] rounded-2xl py-7.5 absolute shadow-2xl z-30">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleEditUser)} className="space-y-5 w-10/12 mx-auto">
