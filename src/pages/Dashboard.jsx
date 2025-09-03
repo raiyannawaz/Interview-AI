@@ -53,7 +53,7 @@ export default function Dashboard() {
   }, [success])
 
   return (
-    <div className="h-auto min-h-svh lg:h-svh lg:min-h-auto w-svw flex flex-col lg:flex-row lg:justify-between gap-5 lg:gap-7.5 bg-slate-50 p-5 lg:p-7.5 relative">
+    <div className="h-auto min-h-dvh lg:h-dvh lg:min-h-auto w-svw flex flex-col lg:flex-row lg:justify-between gap-5 lg:gap-7.5 bg-slate-50 p-5 lg:p-7.5 relative">
       {/* Interview Attempts */}
       {currentIA && <InterviewAttempt handleCurrentIA={handleCurrentIA} />}
       { editMode && <UserProfile/>}
@@ -67,7 +67,7 @@ export default function Dashboard() {
           </div>
           <Button
             type="submit" onClick={handleRedirect}
-            className="lg:py-10 rounded-xl text-white font-medium text-sm lg:text-text bg-gradient-to-r from-slate-700 to-slate-500 hover:from-slate-800 hover:to-slate-600 shadow-md"
+            className="lg:py-10 rounded-xl text-white font-medium text-xs lg:text-text bg-gradient-to-r from-slate-700 to-slate-500 hover:from-slate-800 hover:to-slate-600 shadow-md"
           >Start Interview</Button>
         </div>
         <div className="center-content lg:h-4/5 px-5 lg:px-7.5 pb-5 lg:pb-7.5">

@@ -29,7 +29,7 @@ export default function Feedback() {
   }, [feedback])
 
   return (
-    <div className="h-[100dvh] w-svw flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200 p-6">
+    <div className="h-dvh w-svw flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200 p-6">
       <Card className="w-full max-w-2xl shadow-xl rounded-2xl flex flex-col max-h-[90vh]">
         
         {/* Header (fixed, not scrollable) */}
