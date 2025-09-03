@@ -56,6 +56,10 @@ export default function InterviewSetup() {
     dispatch(handleGetQuestion({existingIAs,...values}))
   }
 
+  const handleBack = () =>{
+    navigate('/')
+  }
+
   useEffect(() => {
     if (question && !loading) {
       navigate('/interview-session')
@@ -67,7 +71,7 @@ export default function InterviewSetup() {
   }, [question, loading])
 
   return (
-    <div className="h-[100svh] w-svw grid content-center justify-items-center bg-gradient-to-br from-slate-100 to-slate-200">
+    <div className="h-[100dvh] w-svw grid content-center justify-items-center bg-gradient-to-br from-slate-100 to-slate-200">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(handleSubmit)}
@@ -169,6 +173,12 @@ export default function InterviewSetup() {
             className="w-full bg-gradient-to-r from-slate-700 to-slate-500 hover:bg-gradient-to-l hover:from-slate-700 hover:to-slate-500"
           >
             Submit
+          </Button>
+           <Button
+            onClick={handleBack}
+            className="space-y-0 w-full text-white-800 bg-gradient-to-r from-slate-200 to-slate-300 hover:bg-gradient-to-l hover:from-slate-200 hover:to-slate-300"
+          >
+            Cancel
           </Button>
         </form>
       </Form>

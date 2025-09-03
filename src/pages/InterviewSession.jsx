@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router"
-import { handleSubmitAnswer, resetAlert } from "@/app/features/interview/interviewSlice"
+import { handleSubmitAnswer, resetAlert, resetFeedback } from "@/app/features/interview/interviewSlice"
 
 export default function InterviewSession() {
   const [timeLeft, setTimeLeft] = useState(300) // 5 min timer
@@ -35,6 +35,14 @@ export default function InterviewSession() {
     return `${m}:${s < 10 ? "0" : ""}${s}`
   }
 
+  const handleBack = () =>{
+    navigate('/')
+
+    setTimeout(()=>{
+      dispatch(resetFeedback())
+    }, 1000)
+  }
+
   useEffect(() => {
     if (feedback) {
       navigate('/interview-feedback')
@@ -52,7 +60,7 @@ export default function InterviewSession() {
   }, [question, loading])
 
   return (
-    <div className="h-[100svh] w-svw bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center p-6">
+    <div className="h-[100dvh] w-svw bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center p-6">
       <Card className="w-full max-w-2xl shadow-xl rounded-2xl text-sm md:text-base">
         <CardHeader className="text-center">
           <CardTitle className="text-xl font-semibold">Interview Question</CardTitle>
@@ -80,6 +88,12 @@ export default function InterviewSession() {
             className="w-full bg-gradient-to-r from-slate-700 to-slate-500 hover:from-slate-800 hover:to-slate-600"
           >
             Submit Answer
+          </Button>
+          <Button
+            onClick={handleBack}
+            className="space-y-0 w-full text-white-800 bg-gradient-to-r from-slate-200 to-slate-300 hover:bg-gradient-to-l hover:from-slate-200 hover:to-slate-300"
+          >
+            Cancel
           </Button>
         </CardContent>
       </Card>

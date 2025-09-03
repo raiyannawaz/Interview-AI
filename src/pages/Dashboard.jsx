@@ -53,7 +53,7 @@ export default function Dashboard() {
   }, [success])
 
   return (
-    <div className="h-auto min-h-[100svh] lg:h-[100svh] lg:min-h-auto w-svw flex flex-col lg:flex-row lg:justify-between gap-5 lg:gap-7.5 bg-slate-50 p-5 lg:p-7.5 relative">
+    <div className="h-auto min-h-svh lg:h-svh lg:min-h-auto w-svw flex flex-col lg:flex-row lg:justify-between gap-5 lg:gap-7.5 bg-slate-50 p-5 lg:p-7.5 relative">
       {/* Interview Attempts */}
       {currentIA && <InterviewAttempt handleCurrentIA={handleCurrentIA} />}
       { editMode && <UserProfile/>}
@@ -67,18 +67,18 @@ export default function Dashboard() {
           </div>
           <Button
             type="submit" onClick={handleRedirect}
-            className="lg:py-10 rounded-xl text-white font-medium lg:text-lg bg-gradient-to-r from-slate-700 to-slate-500 hover:from-slate-800 hover:to-slate-600 shadow-md"
+            className="lg:py-10 rounded-xl text-white font-medium text-sm lg:text-text bg-gradient-to-r from-slate-700 to-slate-500 hover:from-slate-800 hover:to-slate-600 shadow-md"
           >Start Interview</Button>
         </div>
         <div className="center-content lg:h-4/5 px-5 lg:px-7.5 pb-5 lg:pb-7.5">
           <div className="max-h-[50vh] lg:max-h-full lg:h-full w-full space-y-3 overflow-y-auto [scrollbar-width:none] rounded-2xl">
             {interviewAttempts.map(interviewAttempt =>
-              <div className="flex justify-between items-center bg-slate-400 p-3 rounded-2xl" key={interviewAttempt.id}>
+              <div className="flex justify-between items-center space-x-5 bg-slate-400 p-3 rounded-2xl" key={interviewAttempt.id}>
                 <h2 className="hidden lg:block text-sm lg:text-base text-white">{interviewAttempt.question.split(' ').slice(0, 12).join(' ')}...</h2>
                 <h2 className="block lg:hidden text-xs lg:text-base text-white">{interviewAttempt.question.split(' ').slice(0, 10).join(' ')}</h2>
                 <Button
                   type="submit" onClick={() => handleCurrentIA(interviewAttempt)}
-                  className="rounded-xl ms-auto text-white font-medium text-sm lg:text-lg bg-gradient-to-r from-slate-600 to-slate-800 hover:from-slate-800 hover:to-slate-600 shadow-md"
+                  className="rounded-xl ms-auto w-16 lg:w-20 text-white font-medium text-xs lg:text-base bg-gradient-to-r from-slate-600 to-slate-800 hover:from-slate-800 hover:to-slate-600 shadow-md"
                 >View </Button>
               </div>
             )}
