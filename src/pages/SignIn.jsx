@@ -44,7 +44,7 @@ export default function SignIn() {
   }, [success])
 
   return (
-    <div className="min-h-screen w-svw overflow-hidden flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200">
+    <div className="h-svh w-svw overflow-hidden flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200">
       <div className="w-11/12 lg:w-full lg:max-w-md bg-white rounded-2xl shadow-2xl p-8 space-y-6">
         {/* Header */}
         <div className="text-center space-y-2">
