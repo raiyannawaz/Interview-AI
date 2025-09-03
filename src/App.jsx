@@ -43,7 +43,7 @@ function App() {
   }, [success])
 
   return (
-    <Router>
+    <Router basename='/Interview-AI'>
       <Alert />
       <Spinner />
       <Routes>
