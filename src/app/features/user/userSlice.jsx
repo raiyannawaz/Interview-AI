@@ -66,12 +66,11 @@ export const handleUpdateUser = createAsyncThunk('user/update-user', async (form
         userData.data.avatar_url = imageUrl
     }
 
-    let { data, error } = await supabase.auth.updateUser(userData, 
-        {emailRedirectTo: 'https://raiyannawaz.github.io/Interview-AI/#/auth/callback'}
+    let { data, error } = await supabase.auth.updateUser(userData,
+        { emailRedirectTo: 'https://raiyannawaz.github.io/Interview-AI/#/auth/callback' }
     )
-
     if (error) {
-        return rejectWithValue({  message: error.message })
+        return rejectWithValue({ message: error.message })
     }
 
     return { ...data, message: formData.currentEmail !== formData.email ? 'Please confirm your new mail id' : 'User updated' }

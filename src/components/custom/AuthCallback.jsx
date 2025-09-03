@@ -13,5 +13,5 @@ export default function AuthCallback() {
     });
   }, [navigate]);
 
-  return <p>Completing sign in...</p>;
+  return <div className="h-svh w-svw bg-slate-50 flex justify-center items-center"><p>Completing sign in...</p></div>;
 }
