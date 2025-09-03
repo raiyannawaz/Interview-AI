@@ -63,7 +63,7 @@ export default function Dashboard() {
         <div className="top-content flex justify-between items-center h-[6.5rem] lg:h-1/5 px-5 lg:px-7.5">
           <div className="flex flex-col lg:space-y-1">
             <h2 className="text-lg lg:text-3xl font-bold">Hello {name?.split(' ').length > 0 ? name.split(' ')[1] : name?.split(' ')[0] || ''}</h2>
-            <p className="text-xs">List of your interview attempts</p>
+            <p className="text-xs lg:text-sm">List of your interview attempts</p>
           </div>
           <Button
             type="submit" onClick={handleRedirect}
