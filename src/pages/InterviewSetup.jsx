@@ -75,7 +75,7 @@ export default function InterviewSetup() {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(handleSubmit)}
-          className="space-y-5 bg-white p-7.5 lg:p-10 shadow-xl rounded-lg w-10/12 lg:w-1/3 text-sm md:text-base"
+          className="space-y-5 bg-white p-6.5 lg:p-10 shadow-xl rounded-lg w-10/12 lg:w-1/3 text-sm md:text-base"
         >
           {/* Role */}
           <FormField className="w-full"
