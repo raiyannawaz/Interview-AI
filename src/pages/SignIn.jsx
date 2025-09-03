@@ -9,7 +9,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
 import { handleSignIn, resetAuth } from '@/app/features/auth/authSlice'
 import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate } from 'react-router'
+import { NavLink, useNavigate } from 'react-router'
 
 const formSchema = z.object({
   email: z.string().email('Invalid email'),
@@ -94,9 +94,9 @@ export default function SignIn() {
         {/* Footer */}
         <p className="text-center text-sm text-slate-500">
           Don’t have an account?{" "}
-          <a href="/#/sign-up" className="text-slate-700 font-medium hover:underline">
+          <NavLink to="/sign-up" className="text-slate-700 font-medium hover:underline">
             Sign Up
-          </a>
+          </NavLink>
         </p>
       </div>
     </div>

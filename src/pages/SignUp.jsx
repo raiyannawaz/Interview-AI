@@ -9,7 +9,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
 import { handleSignUp, resetAuth } from '@/app/features/auth/authSlice'
 import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate } from 'react-router'
+import { NavLink, useNavigate } from 'react-router'
 
 const formSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -116,9 +116,9 @@ export default function SignUp() {
         {/* Footer */}
         <p className="text-center text-sm text-slate-500">
           Already have an account?{" "}
-          <a href="/#/sign-in" className="text-slate-700 font-medium hover:underline">
+          <NavLink to="/sign-in" className="text-slate-700 font-medium hover:underline">
             Sign In
-          </a>
+          </NavLink>
         </p>
       </div>
     </div>
